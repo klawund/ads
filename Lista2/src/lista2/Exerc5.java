@@ -98,7 +98,7 @@ public class Exerc5
 		averageAge = agesSum / count;
 		averageNetSalary = netSalariesSum / count;
 		System.out.println(veteransCount + "/" + count);
-		veteranPercentage = (veteransCount / count) * 100f;
+		veteranPercentage = (veteransCount * 100.0f) / count ;
 		System.out.println(veteranPercentage);
 		
 		finalMessage = "Média de idade dos usuários: " + averageAge + "\n"
