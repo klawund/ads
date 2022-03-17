@@ -125,7 +125,7 @@ public class Program
 
 		do
 		{
-			line = Integer.parseInt(JOptionPane.showInputDialog(message));
+			line = safeParseInt(JOptionPane.showInputDialog(message), 0);
 
 			if (!Arrays.asList(1, 2, 3).contains(line))
 			{
@@ -252,5 +252,17 @@ public class Program
 		message += buildFlatHash(finalHash);
 
 		JOptionPane.showMessageDialog(null, message, "Resultado", JOptionPane.INFORMATION_MESSAGE);
+	}
+
+	static int safeParseInt(String stringToParse, int fallback)
+	{
+		try
+		{
+			return Integer.parseInt(stringToParse);
+		}
+		catch (NumberFormatException e)
+		{
+			return fallback;
+		}
 	}
 }
