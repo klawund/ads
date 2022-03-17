@@ -26,7 +26,6 @@ public class Exerc2
 		}
 
 		showStudentApproval(finalGrade);
-
 	}
 
 	public static double[] readStudentGrades()
