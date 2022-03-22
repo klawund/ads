@@ -167,14 +167,14 @@ public class Program
 		return play;
 	}
 
-	static void writePlay(String[][] hash, int[] play, String player)
-	{
-		hash[play[0]][play[1]] = player;
-	}
-
 	static boolean validatePlay(String[][] hash, int[] play)
 	{
 		return " ".equals(hash[play[0]][play[1]]);
+	}
+
+	static void writePlay(String[][] hash, int[] play, String player)
+	{
+		hash[play[0]][play[1]] = player;
 	}
 
 	static boolean hasWon(String[][] hash, String player)
