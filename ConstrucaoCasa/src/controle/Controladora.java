@@ -3,8 +3,6 @@ package controle;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.swing.JOptionPane;
-
 import modelo.Abertura;
 import modelo.Casa;
 import modelo.Janela;

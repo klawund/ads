@@ -52,14 +52,14 @@ public class Casa
 	}
 
 	public void constroiCasa(String descricao, String cor, List<Abertura> listaDeJanelas,
-			List<Abertura> listaDePortas)
+		List<Abertura> listaDePortas)
 	{
 		setDescricao(descricao);
 		setCor(cor);
 		setListaDeJanelas(listaDeJanelas);
 		setListaDePortas(listaDePortas);
 	}
-	
+
 	public Abertura retornaAbertura(int posicao, String tipoAbertura)
 	{
 		if ("porta".equals(tipoAbertura))
@@ -73,10 +73,11 @@ public class Casa
 	{
 		abertura.setEstado(novoEstado);
 	}
-	
+
 	public String geraInfoCasa()
 	{
-		String informacoes = "Descrição: " + this.descricao + "\nCor: " + this.cor + "\nLista de portas:\n";
+		String informacoes =
+			"Descrição: " + this.descricao + "\nCor: " + this.cor + "\nLista de portas:\n";
 
 		for (Abertura abertura : this.listaDePortas)
 		{
