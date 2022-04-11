@@ -24,8 +24,22 @@ public class EntradaSaida
 
 	public static int lerQuantidadeDeCarros()
 	{
-		return Integer.parseInt(
-			JOptionPane.showInputDialog("Insira a quantidade de carros a ser fabricada:"));
+		int q;
+
+		do
+		{
+			q = Integer.parseInt(
+				JOptionPane.showInputDialog("Insira a quantidade de carros a ser fabricada:"));
+
+			if (q <= 0)
+			{
+				EntradaSaida.exibirMensagemDeErro(
+					"A quantidade de carros a serem fabricados deve ser positiva!");
+			}
+		}
+		while (q <= 0);
+
+		return q;
 	}
 
 	public static int lerOpcaoMenu()
@@ -60,7 +74,8 @@ public class EntradaSaida
 
 	public static void exibirResumoCarros(String resumo)
 	{
-		JOptionPane.showMessageDialog(null, resumo, "Resumo de carros fabricados:", JOptionPane.INFORMATION_MESSAGE);
+		JOptionPane.showMessageDialog(null, resumo, "Resumo de carros fabricados:",
+			JOptionPane.INFORMATION_MESSAGE);
 	}
 
 }
