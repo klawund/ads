@@ -61,7 +61,7 @@ public class Conta
 	public void sacar(Movimentacao saque)
 	{
 		listaDeMovimentacao.add(saque);
-		saldo -= saque.getValor();
+		saldo += saque.getValor();
 	}
 
 	public String gerarSaldo()

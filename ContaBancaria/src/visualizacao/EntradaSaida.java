@@ -11,14 +11,16 @@ public class EntradaSaida
 {
 	public static int lerOpcaoMenu()
 	{
-		String[] opcoes = {"Criar conta", "Ver saldo", "Ver informações da conta", "Fazer depósito", "Fazer saque", "Gerar extrato completo",
-			"Gerar extrato de saques", "Gerar extrato de depósitos", "Sair"};
+		String[] opcoes = {"Criar conta", "Ver saldo", "Ver informações da conta", "Fazer depósito",
+			"Fazer saque", "Gerar extrato completo", "Gerar extrato de saques",
+			"Gerar extrato de depósitos", "Sair"};
 
 		JComboBox menu = new JComboBox(opcoes);
 		int okCancel;
 		do
 		{
-			okCancel = JOptionPane.showConfirmDialog(null, menu, "Escolha uma opção:", JOptionPane.OK_CANCEL_OPTION);
+			okCancel = JOptionPane.showConfirmDialog(null, menu, "Escolha uma opção:",
+				JOptionPane.OK_CANCEL_OPTION);
 		}
 		while (okCancel != 0);
 
@@ -67,18 +69,17 @@ public class EntradaSaida
 		do
 		{
 			valor = Double.parseDouble(JOptionPane.showInputDialog("Insira o valor a ser sacado:"));
-			ok = valor > 0 && (conta.getSaldo() - valor) >= (1001.00 * -1);
 
 			if (valor < 0)
 			{
 				exibirErro("Não é possível sacar um valor negativo!");
 			}
-			else if ((conta.getSaldo() - valor) >= (1001.00 * -1))
+			else if (conta.getSaldo() - valor < -1000)
 			{
 				exibirErro("A sua conta não pode ficar mais de R$1.000,00 negativos!");
 			}
 		}
-		while (!ok);
+		while (valor < 0 || conta.getSaldo() - valor < -1000);
 
 		return valor;
 	}
@@ -97,8 +98,10 @@ public class EntradaSaida
 
 	public static void exibirExtratoCompleto(Conta conta)
 	{
-		JOptionPane.showMessageDialog(null, "Extrato completo:\n\n" + conta.gerarExtrato(), "Extrato",
-			JOptionPane.INFORMATION_MESSAGE);
+		String mensagem =
+			"Extrato completo:\n\n" + conta.gerarExtrato() + "--------------------------\nSaldo: "
+				+ conta.gerarSaldo();
+		JOptionPane.showMessageDialog(null, mensagem, "Extrato", JOptionPane.INFORMATION_MESSAGE);
 	}
 
 	public static void exibirExtratoDeDepositos(Conta conta)

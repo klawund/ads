@@ -12,7 +12,7 @@ public class Movimentacao
 
 	public Movimentacao(double valor)
 	{
-		this.tipo = valor > 0 ? 1 : 2;
+		this.tipo = valor > 0 ? 2 : 1;
 		this.valor = valor;
 		this.data = new Date();
 	}
@@ -51,7 +51,7 @@ public class Movimentacao
 	public String toString()
 	{
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-		return String.format("%s | %s | R$%.2f", sdf.format(data), tipo == 1 ? "Saque" : "Depósito",
+		return String.format("%s | %s | R$%.2f", sdf.format(data), tipo == 1 ? "Saque    " : "Depósito",
 			valor);
 	}
 }

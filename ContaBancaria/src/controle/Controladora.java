@@ -53,7 +53,8 @@ public class Controladora
 						break;
 					}
 
-					Movimentacao deposito = new Movimentacao(EntradaSaida.solicitarInformacoesDeposito());
+					Movimentacao deposito = new Movimentacao(
+						EntradaSaida.solicitarInformacoesDeposito());
 					conta.depositar(deposito);
 					break;
 				case 5: // saque
@@ -63,13 +64,27 @@ public class Controladora
 						break;
 					}
 
-					Movimentacao saque = new Movimentacao(EntradaSaida.solicitarInformacoesSaque(conta) * -1);
+					if (conta.getSaldo() == -1000)
+					{
+						EntradaSaida.exibirErro(
+							"Não é possível sacar! Vocẽ já está no limite do cheque especial!");
+						break;
+					}
+
+					Movimentacao saque = new Movimentacao(
+						EntradaSaida.solicitarInformacoesSaque(conta) * -1);
 					conta.sacar(saque);
 					break;
 				case 6: // extrato completo
 					if (conta == null)
 					{
 						EntradaSaida.exibirErro("Ainda não há uma conta criada!");
+						break;
+					}
+
+					if (conta.getListaDeMovimentacao().isEmpty())
+					{
+						EntradaSaida.exibirErro("Ainda não há nenhuma movimentação na conta!");
 						break;
 					}
 
@@ -82,12 +97,24 @@ public class Controladora
 						break;
 					}
 
+					if (conta.gerarExtratoSaques().isEmpty())
+					{
+						EntradaSaida.exibirErro("Ainda não há nenhum saque na conta!");
+						break;
+					}
+
 					EntradaSaida.exibirExtratoDeSaques(conta);
 					break;
 				case 8: // extrato depósitos
 					if (conta == null)
 					{
 						EntradaSaida.exibirErro("Ainda não há uma conta criada!");
+						break;
+					}
+
+					if (conta.gerarExtratoDepositos().isEmpty())
+					{
+						EntradaSaida.exibirErro("Ainda não há nenhum depósito na conta!");
 						break;
 					}
 
