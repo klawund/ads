@@ -1,10 +1,21 @@
 package modelo;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class Movimentacao
 {
+	// 1 - Saque | 2 - Deposito
 	private int tipo;
 	private double valor;
-	private String date;
+	private Date data;
+
+	public Movimentacao(double valor)
+	{
+		this.tipo = valor > 0 ? 1 : 2;
+		this.valor = valor;
+		this.data = new Date();
+	}
 
 	public int getTipo()
 	{
@@ -26,13 +37,21 @@ public class Movimentacao
 		this.valor = valor;
 	}
 
-	public String getDate()
+	public Date getData()
 	{
-		return date;
+		return data;
 	}
 
-	public void setDate(String date)
+	public void setData(Date data)
 	{
-		this.date = date;
+		this.data = data;
+	}
+
+	@Override
+	public String toString()
+	{
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+		return String.format("%s | %s | R$%.2f", sdf.format(data), tipo == 1 ? "Saque" : "Depósito",
+			valor);
 	}
 }

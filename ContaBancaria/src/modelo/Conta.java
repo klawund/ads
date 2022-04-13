@@ -1,13 +1,16 @@
 package modelo;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Conta
 {
-	private String titularDaConta;
+	// 1 - Poupança | 2 - Corrente
 	private int tipo;
+	private String titularDaConta;
 	private double saldo;
-	private List<Movimentacao> listaDeMovimentacao;
+	private List<Movimentacao> listaDeMovimentacao = new ArrayList<>();
 
 	public String getTitularDaConta()
 	{
@@ -34,7 +37,7 @@ public class Conta
 		return saldo;
 	}
 
-	public void setSaldo(double saldo)
+	private void setSaldo(double saldo)
 	{
 		this.saldo = saldo;
 	}
@@ -49,33 +52,66 @@ public class Conta
 		this.listaDeMovimentacao = listaDeMovimentacao;
 	}
 
-	public void depositar()
+	public void depositar(Movimentacao deposito)
 	{
-
+		listaDeMovimentacao.add(deposito);
+		saldo += deposito.getValor();
 	}
 
-	public void sacar()
+	public void sacar(Movimentacao saque)
 	{
-
+		listaDeMovimentacao.add(saque);
+		saldo -= saque.getValor();
 	}
 
-	public void gerarSaldo()
+	public String gerarSaldo()
 	{
-
+		return String.format("R$%.2f", saldo);
 	}
 
 	public String gerarDadosDaConta()
 	{
-		return "";
+		return "Titular: " + titularDaConta + "\n" + "Tipo: " + (tipo == 1 ? "Conta poupança"
+			: "Conta corrente") + "\n" + "Saldo: " + String.format("R$%.2f", saldo);
 	}
 
 	public String gerarExtratoDepositos()
 	{
-		return "";
+		StringBuilder sb = new StringBuilder();
+		List<Movimentacao> depositos = listaDeMovimentacao.stream().filter(m -> m.getTipo() == 2)
+			.collect(Collectors.toList());
+
+		for (Movimentacao deposito : depositos)
+		{
+			sb.append(deposito).append("\n");
+		}
+
+		return sb.toString();
 	}
 
 	public String gerarExtratoSaques()
 	{
-		return "";
+		StringBuilder sb = new StringBuilder();
+		List<Movimentacao> saques = listaDeMovimentacao.stream().filter(m -> m.getTipo() == 1)
+			.collect(Collectors.toList());
+
+		for (Movimentacao saque : saques)
+		{
+			sb.append(saque).append("\n");
+		}
+
+		return sb.toString();
+	}
+
+	public String gerarExtrato()
+	{
+		StringBuilder sb = new StringBuilder();
+
+		for (Movimentacao movimentacao : listaDeMovimentacao)
+		{
+			sb.append(movimentacao).append("\n");
+		}
+
+		return sb.toString();
 	}
 }
