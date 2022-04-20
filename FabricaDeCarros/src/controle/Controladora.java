@@ -29,6 +29,14 @@ public class Controladora
 				case 2:
 					fabrica.venderCarro();
 					break;
+				case 3:
+					if (fabrica.getCarros().isEmpty())
+					{
+						EntradaSaida.exibirMensagemDeErro("Ainda não há carros fabricados!");
+						break;
+					}
+					EntradaSaida.exibirResumoCarros(fabrica.gerarResumoCarros());
+					break;
 				default:
 					System.exit(0);
 			}

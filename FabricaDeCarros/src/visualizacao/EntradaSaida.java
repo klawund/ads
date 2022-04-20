@@ -51,18 +51,19 @@ public class EntradaSaida
 		mensagem.append("Selecione uma das opções:\n\n");
 		mensagem.append("1 - Fabricar carros\n");
 		mensagem.append("2 - Vender um carro\n");
-		mensagem.append("3 - Sair");
+		mensagem.append("3 - Listar os carros fabricados\n");
+		mensagem.append("4 - Sair");
 
 		do
 		{
 			opcao = Integer.parseInt(JOptionPane.showInputDialog(mensagem.toString()));
 
-			if (!Arrays.asList(1, 2, 3).contains(opcao))
+			if (!Arrays.asList(1, 2, 3, 4).contains(opcao))
 			{
 				exibirMensagemDeErro("Opção inválida!");
 			}
 		}
-		while (!Arrays.asList(1, 2, 3).contains(opcao));
+		while (!Arrays.asList(1, 2, 3, 4).contains(opcao));
 
 		return opcao;
 	}

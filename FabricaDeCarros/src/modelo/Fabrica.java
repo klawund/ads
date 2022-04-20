@@ -8,6 +8,11 @@ public class Fabrica
 {
 	private List<Carro> carros = new ArrayList<>();
 
+	public List<Carro> getCarros()
+	{
+		return carros;
+	}
+
 	public void venderCarro()
 	{
 		if (carros.isEmpty())
