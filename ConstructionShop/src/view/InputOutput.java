@@ -2,6 +2,7 @@ package view;
 
 import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
+import model.Shop;
 
 public class InputOutput
 {
@@ -59,7 +60,18 @@ public class InputOutput
 				ok = false;
 			}
 
-			ok = ok && quantity >= min && quantity <= max;
+			if (min < 0)
+			{
+				ok = ok && quantity <= max;
+			}
+			else if (max < 0)
+			{
+				ok = ok && quantity >= min;
+			}
+			else
+			{
+				ok = ok && quantity >= min && quantity <= max;
+			}
 
 			if (ok)
 			{
@@ -68,7 +80,47 @@ public class InputOutput
 
 			InputOutput.showError("Quantidade inválida!");
 		}
-		while (!ok);
+		while (true);
 		return quantity;
+	}
+
+	public static String readProductCode(Shop shop)
+	{
+		String code;
+		do
+		{
+			code = InputOutput.readInfo("Insira o código do produto:");
+
+			if (shop.hasProduct(code))
+			{
+				InputOutput.showError("Já existe um produto cadastrado com esse código!");
+			}
+		}
+		while (shop.hasProduct(code));
+		return code;
+	}
+
+	public static double readProductPrice()
+	{
+		String priceStr;
+		double price = 0.0;
+
+		boolean wentWrong = false;
+		do
+		{
+			priceStr = InputOutput.readInfo("Insira o valor do produto (R$00.00):");
+
+			try
+			{
+				price = Double.parseDouble(priceStr);
+			}
+			catch (Exception e)
+			{
+				InputOutput.showError("Dado inválido!");
+				wentWrong = true;
+			}
+		}
+		while (wentWrong);
+		return price;
 	}
 }

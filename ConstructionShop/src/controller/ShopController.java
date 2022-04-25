@@ -49,56 +49,16 @@ public class ShopController
 		while (menuOption != 8);
 	}
 
-	public void createProduct()
+	private void createProduct()
 	{
-		String code = readProductCode();
+		String code = InputOutput.readProductCode(shop);
 		String description = InputOutput.readInfo("Insira a descrição do produto:");
-		double price = readProductPrice();
+		double price = InputOutput.readProductPrice();
 
 		shop.createProduct(new Product(code, description, price));
 	}
 
-	private double readProductPrice()
-	{
-		String priceStr;
-		double price = 0.0;
-
-		boolean wentWrong = false;
-		do
-		{
-			priceStr = InputOutput.readInfo("Insira o valor do produto (R$00.00):");
-
-			try
-			{
-				price = Double.parseDouble(priceStr);
-			}
-			catch (Exception e)
-			{
-				InputOutput.showError("Dado inválido!");
-				wentWrong = true;
-			}
-		}
-		while (wentWrong);
-		return price;
-	}
-
-	private String readProductCode()
-	{
-		String code;
-		do
-		{
-			code = InputOutput.readInfo("Insira o código do produto:");
-
-			if (shop.hasProduct(code))
-			{
-				InputOutput.showError("Já existe um produto cadastrado com esse código!");
-			}
-		}
-		while (shop.hasProduct(code));
-		return code;
-	}
-
-	public void getStockReport()
+	private void getStockReport()
 	{
 		if (shop.getAllProducts().isEmpty())
 		{
@@ -108,7 +68,7 @@ public class ShopController
 		InputOutput.showMessage(shop.getStockReport(), "Estoque");
 	}
 
-	public void addToStock()
+	private void addToStock()
 	{
 		if (shop.getAllProducts().isEmpty())
 		{
@@ -116,52 +76,17 @@ public class ShopController
 			return;
 		}
 
-		String code = InputOutput.readInfo("Insira o código do produto:");
-		if (!shop.hasProduct(code))
-		{
-			InputOutput.showError("Não há nenhum produto com esse código cadastrado!");
-			return;
-		}
+		Product product = (Product) InputOutput.readOption(shop.getAllProducts().toArray(new Product[0]),
+			"Escolha um produto", false);
 
-		int quantity = readProductQuantity();
+		int quantity = InputOutput.readSafeInteger("Insira a quantidade:", 1, -1);
 
-		Product product = shop.getProductByCode(code);
 		product.setTransientQuantity(quantity);
 		shop.addEntry(product);
 		InputOutput.showMessage("Lançamento efetuado!", "Sucesso");
 	}
 
-	public int readProductQuantity()
-	{
-		String quantityStr;
-		boolean wentWrong = false;
-		int quantity = 0;
-
-		do
-		{
-			quantityStr = InputOutput.readInfo("Insira a quantidade:");
-
-			try
-			{
-				quantity = Integer.parseInt(quantityStr);
-			}
-			catch (Exception e)
-			{
-				wentWrong = true;
-			}
-
-			wentWrong = wentWrong || quantity <= 0;
-
-			if (wentWrong)
-			{
-				InputOutput.showError("Valor inválido");
-			}
-		}
-		while (wentWrong);
-		return quantity;
-	}
-
-	public void sellProduct()
+	private void sellProduct()
 	{
 		if (shop.getAllProducts().isEmpty())
 		{
@@ -186,7 +111,7 @@ public class ShopController
 		InputOutput.showMessage("Produto vendido com sucesso!", "Venda");
 	}
 
-	public void removeProduct()
+	private void removeProduct()
 	{
 		if (shop.getAllProducts().isEmpty())
 		{
@@ -201,7 +126,7 @@ public class ShopController
 		InputOutput.showMessage("Produto removido com sucesso!", "Remover produto");
 	}
 
-	public void generateSaleLog()
+	private void generateSaleLog()
 	{
 		if (shop.hasSales())
 		{
