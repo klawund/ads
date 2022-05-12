@@ -22,7 +22,33 @@
         <a href="faleconosco.html"><div class="opcao">Fale conosco</div></a>
     </nav>
     <section>
-
+        <h2>Fale conosco!</h2>
+        <p>Ficou com alguma dúvida? Preencha este formulário e entraremos em contato!</p>
+        <form name="frmfaleconosco" method="get" action="#">
+            <fieldset>
+                <legend>Dados pessoais:</legend>
+                <label for="nome">Nome: </label>
+                <input type="text" name="txtnome" id="nome">
+                <label for="fone">Telefone: </label>
+                <input type="text" name="txtfone" id="fone">
+                <label for="email">E-mail: </label>
+                <input type="text" name="txtemail" id="email">
+            </fieldset>
+            <fieldset>
+                <legend>Motivo do contato:</legend>
+                <label for="motivo">Motivo: </label>
+                <select name="selmotivo" id="motivo">
+                    <option value="">Escolha</option>
+                    <option value="RE">Reclamação</option>
+                    <option value="SU">Sugestão</option>
+                    <option value="PR">Informação sobre o produto</option>
+                </select>
+                <label for="comentario">Comnetário:</label>
+                <textarea name="txtcomentario" id="comentario"></textarea>
+                <button type="reset">Limpar</button>
+                <button type="submit">Enviar</button>
+            </fieldset>
+        </form>
     </section>
     <footer>Copyright &copy; Escola Sistêmica 2022</footer>
 </body>
