@@ -14,7 +14,7 @@
 
 <body>
     <header>
-        <div id="header__logo"></div>
+        <img id="header__logo" src="resources/img/white-logo.png" alt="Pink Floyd logo">
     </header>
     <nav>
         <div class="nav__option">
@@ -27,81 +27,92 @@
             <a href="pages/subscribe.html">Vire um fã</a>
         </div>
     </nav>
-    <section id="slider">
-        <!--slider-->
-    </section>
-    <section id="cards">
-        <div id="cards_container">
-            <div class="card">
-                <div class="card__img"></div>
-                <h3 class="card__header"></h3>
-                <p class="card__text"></p>
-            </div>
-            <div class="card">
-                <div class="card__img"></div>
-                <h3 class="card__header"></h3>
-                <p class="card__text"></p>
-            </div>
-        </div>
-    </section>
-    <section id="songs">
-        <h2 id="songs__header">Comece por aqui!</h2>
-        <p id="songs__description"></p>
-        <div id="songs_container">
-            <div id="wish_you_were_here" class="song">
-                <div class="song__album_cover"></div>
-                <p class="song__header">
-                    Wish You Were Here<span class="song__header_album"> Wish You Were Here</span>
-                </p>
-                <p class="song__play">Tocada <span class="song__play__count">478.360.937</span> vezes</p>
-                <div class="song__spotify_embed">
-                    <iframe
-                        src="https://open.spotify.com/embed/track/6mFkJmJqdDVQ1REhVfGgd1?utm_source=generator"
-                        width="50%" height="80" frameBorder="0" allowfullscreen=""
-                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+    <div>
+        <section id="slider__container">
+            <!--slider-->
+        </section>
+        <section id="cards">
+            <div id="cards_container">
+                <div class="card">
+                    <div class="card__img"></div>
+                    <h3 class="card__header"></h3>
+                    <p class="card__text"></p>
+                </div>
+                <div class="card">
+                    <div class="card__img"></div>
+                    <h3 class="card__header"></h3>
+                    <p class="card__text"></p>
                 </div>
             </div>
-            <div id="another_brick_on_the_wall_pt2" class="song">
-                <div class="song__album_cover"></div>
-                <p class="song__header">
-                    Another Brick On The Wall Pt. 2<span class="song__header_album"> The Wall</span>
-                </p>
-                <p class="song__play">Tocada <span class="song__play__count">589.390.363</span> vezes</p>
-                <div class="song__spotify_embed">
-                    <iframe
-                        src="https://open.spotify.com/embed/track/4gMgiXfqyzZLMhsksGmbQV?utm_source=generator"
-                        width="50%" height="80" frameBorder="0" allowfullscreen=""
-                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+        </section>
+        <section id="songs__container">
+            <h2 id="songs__header">Comece por aqui!</h2>
+            <p id="songs__description"></p>
+            <div id="songs__card_container">
+                <div id="wish_you_were_here" class="song">
+                    <div class="song__album_cover"></div>
+                    <div class="song__summary">
+                        <p class="song__header">
+                            Wish You Were Here<span class="song__header_album"> Wish You Were Here</span>
+                        </p>
+                        <p class="song__play">Tocada <span class="song__play__count">478.360.937</span> vezes</p>
+                        <div class="song__spotify_embed">
+                            <iframe
+                                src="https://open.spotify.com/embed/track/6mFkJmJqdDVQ1REhVfGgd1?utm_source=generator"
+                                allowfullscreen=""
+                                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div id="another_brick_on_the_wall_pt2" class="song">
+                    <div class="song__album_cover"></div>
+                    <div class="song__summary">
+                        <p class="song__header">
+                            Another Brick On The Wall Pt. 2<span class="song__header_album"> The Wall</span>
+                        </p>
+                        <p class="song__play">Tocada <span class="song__play__count">589.390.363</span> vezes</p>
+                        <div class="song__spotify_embed">
+                            <iframe
+                                src="https://open.spotify.com/embed/track/4gMgiXfqyzZLMhsksGmbQV?utm_source=generator"
+                                allowfullscreen=""
+                                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div id="time" class="song">
+                    <div class="song__album_cover"></div>
+                    <div class="song__summary">
+                        <p class="song__header">
+                            Time<span class="song__header_album"> The Dark Side Of The Moon</span>
+                        </p>
+                        <p class="song__play">Tocada <span class="song__play__count">239.511.629</span> vezes</p>
+                        <div class="song__spotify_embed">
+                            <iframe
+                                src="https://open.spotify.com/embed/track/3TO7bbrUKrOSPGRTB5MeCz?utm_source=generator"
+                                allowfullscreen=""
+                                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div id="comfortably_numb" class="song">
+                    <div class="song__album_cover"></div>
+                    <div class="song__summary">
+                        <p class="song__header">
+                            Comfortably Numb<span class="song__header_album"> The Wall</span>
+                        </p>
+                        <p class="song__play">Tocada <span class="song__play__count">411.913.500</span> vezes</p>
+                        <div class="song__spotify_embed">
+                            <iframe
+                                src="https://open.spotify.com/embed/track/5HNCy40Ni5BZJFw1TKzRsC?utm_source=generator"
+                                allowfullscreen=""
+                                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div id="time" class="song">
-                <div class="song__album_cover"></div>
-                <p class="song__header">
-                    Time<span class="song__header_album"> The Dark Side Of The Moon</span>
-                </p>
-                <p class="song__play">Tocada <span class="song__play__count">239.511.629</span> vezes</p>
-                <div class="song__spotify_embed">
-                    <iframe
-                        src="https://open.spotify.com/embed/track/3TO7bbrUKrOSPGRTB5MeCz?utm_source=generator"
-                        width="50%" height="80" frameBorder="0" allowfullscreen=""
-                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-                </div>
-            </div>
-            <div id="comfortably_numb" class="song">
-                <div class="song__album_cover"></div>
-                <p class="song__header">
-                    Comfortably Numb<span class="song__header_album"> The Wall</span>
-                </p>
-                <p class="song__play">Tocada <span class="song__play__count">411.913.500</span> vezes</p>
-                <div class="song__spotify_embed">
-                    <iframe
-                        src="https://open.spotify.com/embed/track/5HNCy40Ni5BZJFw1TKzRsC?utm_source=generator"
-                        width="50%" height="80" frameBorder="0" allowfullscreen=""
-                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
+    </div>
+
     <footer>Made with <3 by <a href="https://github.com/klawund">Hiago Klabunde</a></footer>
 </body>
 

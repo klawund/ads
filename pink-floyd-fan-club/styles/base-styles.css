@@ -3,16 +3,48 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.song__header {
+/* header */
+header {
+    display: flex;
+    justify-content: space-around;
+    height: 20vh;
+    background-color: rgb(13, 13, 13);
+}
+
+/* nav */
+nav {
+    height: 4vh;
+    background-color: black;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+
+.nav__option a {
     font-weight: bold;
+    color: white;
+    text-decoration: none;
 }
 
-.song__play__count {
-    font-weight: bold;
+/* footer */
+footer {
+    height: 4vh;
+    background-color: black;
+    /*position: absolute;
+    bottom: 0;
+    width: 100%;*/
+    text-align: center;
+    vertical-align: center;
+    line-height: 4vh;
+    color: white;
 }
 
-.song__spotify_embed {
-    width: 600px;
+footer a {
+    color: white;
 }
