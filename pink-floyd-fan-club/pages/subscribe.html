@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ptBR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Fã-clube de Pink Floyd">
+    <meta name="keywords" content="Pink Floyd, David Gilmour, Roger Waters">
+    <meta name="author" content="Hiago Klabunde">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pink Floyd</title>
+    <link rel="stylesheet" href="../styles/base-styles.css">
+    <link rel="stylesheet" href="../styles/subscribe.css">
+</head>
+
+<body>
+    <header>
+        <img id="header__logo" src="../resources/img/white-logo.png" alt="Pink Floyd logo">
+    </header>
+    <nav>
+        <div class="nav__option">
+            <a href="../index.html">Início</a>
+        </div>
+        <div class="nav__option">
+            <a href="content.html">A banda</a>
+        </div>
+        <div class="nav__option">
+            <a href="#">Vire um fã</a>
+        </div>
+    </nav>
+    <section id="subscribe">
+        <h2 id="subscribe__header">Faça parte do fã-clube</h2>
+        <form id="subscribe__form" action="#">
+            <label for="name" class="subscribe__form_label">Nome:</label>
+            <input type="text" name="name" class="subscribe__form_input" placeholder="Roger Waters" required>
+
+            <label for="sex" class="subscribe__form_label">Sexo:</label>
+            <div id="subscribe__form_sex_options">
+                <input type="radio" name="sex" id="subscribe__form_sex_input_masc" required> Masculino
+                <input type="radio" name="sex" id="subscribe__form_sex_input_fem" required> Feminino
+            </div>
+
+            <label for="dob" class="subscribe__form_label">Data de nascimento</label>
+            <input type="date" name="dob" id="subscribe__form_dob_input" class="subscribe__form_input" placeholder="" required>
+
+            <label for="email" class="subscribe__form_label">E-mail:</label>
+            <input type="email" name="email" id="subscribe__form_email_input" class="subscribe__form_input"
+                placeholder="rogerwaters@pinkfloyd.com" required>
+
+            <label for="tel" class="subscribe__form_label">Telefone:</label>
+            <input type="tel" name="tel" id="subscribe__form_tel_input" class="subscribe__form_input"
+                placeholder="+55 (47) 99212-0662" required>
+
+            <div id="subscribe__form_checkbox_container">
+                <input type="checkbox" name="will_participate" id="subscribe__form_will_participate_input"> Desejo
+                participar do fã clube
+            </div>
+
+            <div id="subscribe__form_button_container">
+                <button type="submit" class="subscribe__form_button" id="subscribe__form_submit_button">Enviar</button>
+                <button type="reset" class="subscribe__form_button" id="subscribe__form_reset_button">Cancelar</button>
+            </div>
+        </form>
+    </section>
+
+    <footer>Made with <3 by <a href="https://github.com/klawund">Hiago Klabunde</a></footer>
+</body>
+
+</html>

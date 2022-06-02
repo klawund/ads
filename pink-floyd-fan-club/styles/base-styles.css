@@ -12,16 +12,21 @@ header {
     display: flex;
     justify-content: space-around;
     height: 20vh;
+    background-color: black;
+}
+
+body {
     background-color: rgb(13, 13, 13);
 }
 
 /* nav */
 nav {
+    padding: 0 20vw;
     height: 4vh;
     background-color: black;
     display: flex;
     flex-wrap: nowrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     
 }

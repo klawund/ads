@@ -1,0 +1,90 @@
+* {
+    color: white;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+#participants {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    font-size: 32px;
+    line-height: 7vh;
+}
+
+#participants__container {
+    height: 69vh;
+    background-color: red;
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.participant {
+    padding: 2% 2%;
+    width: 25%;
+    height: 100%;
+    position: relative;
+}
+
+#roger_waters {
+    background-image: url(../resources/img/roger_waters.jpg);
+    background-size: cover;
+}
+
+#david_gilmour {
+    background-image: url(../resources/img/david_gilmour.jpg);
+    background-size: cover;
+    background-position-x: 55vh;
+}
+
+#richard_wright {
+    background-image: url(../resources/img/richard_wright.webp);
+    background-size: 65vh;
+    background-position-x: 55vh;
+    background-position-y: 70vh;
+}
+
+#nick_mason {
+    background-image: url(../resources/img/nick_mason.jpg);
+    background-size: cover;
+    background-position-x: 65vh;
+}
+
+.participant_header {
+    font-size: 54px;
+    font-weight: 900;
+    color: white;
+    position: absolute;
+    bottom: 0;
+}
+
+#albums {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+#albums__container {
+    width: 60vw;
+    background-color: blue;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.album {
+    border: 1px solid red;
+    width: 20vw;
+    height: 20vw;
+}
