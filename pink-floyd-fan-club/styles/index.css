@@ -1,0 +1,145 @@
+@charset "UTF-8";
+
+h2 {
+    font-size: 2rem;
+    line-height: 7vh;
+    color: white;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#banner {
+    height: 76vh;
+    width: 60vw;
+    background-image: url(../resources/img/banner.jpg);
+    background-size: cover;
+}
+
+/* story_section */
+#story_blocks {
+    width: 60vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#story_blocks__container {
+    width: 100%;
+}
+
+.story_block {
+    width: 60vw;
+    height: 70vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.story_block__image {
+    width: 60%;
+    height: 100%;
+    padding: 5vh;
+    background-size: cover;
+}
+
+#img__01 {
+    background-image: url(../resources/img/pictures/01.webp);
+}
+
+#img__02 {
+    background-image: url(../resources/img/pictures/02.jpg);
+}
+
+#img__03 {
+    background-image: url(../resources/img/pictures/03.jpg);
+    background-position-x: center;
+}
+
+.story_block__image__caption {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.story_block__content {
+    padding: 5vh;
+    background-color: rgb(32, 32, 32);
+    height: 100%;
+    width: 40%;
+}
+
+.story_block__header {
+    font-size: 2rem;
+    line-height: 7vh;
+    color: white;
+}
+
+.story_block__text {
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+    color: white;
+}
+
+/* song cards section */
+
+#song_cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 60vw;
+    justify-content: center;
+}
+
+#song_cards__container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.song {
+    padding: 5vh;
+    width: 50%;
+    height: 25vh;
+}
+
+#song__01 {
+    background-color: cornflowerblue;
+}
+
+#song__02 {
+    background-color: green;
+}
+
+#song__03 {
+    background-color: brown;
+}
+
+#song__04 {
+    background-color: red;
+}
+
+.song__header {
+    font-size: 2rem;
+}
+
+.song__embed {
+    width: 100%;
+}
+
+.song__embed>iframe {
+    border-radius: 2%;
+    height: 80px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+/* modifiers */
+
+.light {
+    font-weight: 100;
+}

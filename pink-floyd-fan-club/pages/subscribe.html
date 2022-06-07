@@ -10,6 +10,10 @@
     <title>Pink Floyd</title>
     <link rel="stylesheet" href="../styles/base-styles.css">
     <link rel="stylesheet" href="../styles/subscribe.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -27,40 +31,16 @@
             <a href="#">Vire um fã</a>
         </div>
     </nav>
-    <section id="subscribe">
-        <h2 id="subscribe__header">Faça parte do fã-clube</h2>
-        <form id="subscribe__form" action="#">
-            <label for="name" class="subscribe__form_label">Nome:</label>
-            <input type="text" name="name" class="subscribe__form_input" placeholder="Roger Waters" required>
 
-            <label for="sex" class="subscribe__form_label">Sexo:</label>
-            <div id="subscribe__form_sex_options">
-                <input type="radio" name="sex" id="subscribe__form_sex_input_masc" required> Masculino
-                <input type="radio" name="sex" id="subscribe__form_sex_input_fem" required> Feminino
+    <div id="container">
+        <section id="form_wrapper">
+            <div id="form_container">
+                <h2 id="form__header">Vire um fã!</h2>
+                <form id="form" action="#" target="_blank"></form>
             </div>
-
-            <label for="dob" class="subscribe__form_label">Data de nascimento</label>
-            <input type="date" name="dob" id="subscribe__form_dob_input" class="subscribe__form_input" placeholder="" required>
-
-            <label for="email" class="subscribe__form_label">E-mail:</label>
-            <input type="email" name="email" id="subscribe__form_email_input" class="subscribe__form_input"
-                placeholder="rogerwaters@pinkfloyd.com" required>
-
-            <label for="tel" class="subscribe__form_label">Telefone:</label>
-            <input type="tel" name="tel" id="subscribe__form_tel_input" class="subscribe__form_input"
-                placeholder="+55 (47) 99212-0662" required>
-
-            <div id="subscribe__form_checkbox_container">
-                <input type="checkbox" name="will_participate" id="subscribe__form_will_participate_input"> Desejo
-                participar do fã clube
-            </div>
-
-            <div id="subscribe__form_button_container">
-                <button type="submit" class="subscribe__form_button" id="subscribe__form_submit_button">Enviar</button>
-                <button type="reset" class="subscribe__form_button" id="subscribe__form_reset_button">Cancelar</button>
-            </div>
-        </form>
-    </section>
+            <div id="form_image"></div>
+        </section>
+    </div>
 
     <footer>Made with <3 by <a href="https://github.com/klawund">Hiago Klabunde</a></footer>
 </body>

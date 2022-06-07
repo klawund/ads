@@ -1,5 +1,8 @@
+@charset "UTF-8";
+
 * {
     color: white;
+    text-decoration: none;
 }
 
 #container {
@@ -61,11 +64,16 @@ h2 {
 }
 
 .participant_header {
+    display: none;
     font-size: 54px;
     font-weight: 900;
     color: white;
     position: absolute;
     bottom: 0;
+}
+
+.participant:hover>.participant_header {
+    display: block;
 }
 
 #albums {
@@ -84,7 +92,112 @@ h2 {
 }
 
 .album {
-    border: 1px solid red;
+    padding: 4%;
     width: 20vw;
     height: 20vw;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.black {
+    color: black;
+}
+
+a {
+    margin: 0;
+    padding: 0;
+}
+
+.album>h3 {
+    visibility: hidden;
+    font-size: 2rem;
+    font-weight: 100;
+}
+
+.album>h2 {
+    visibility: hidden;
+    margin-top: 1rem;
+    font-size: 7rem;
+    font-weight: bolder;
+}
+
+
+.album:hover>h3,
+.album:hover>h2 {
+    visibility: visible;
+}
+
+
+#the_later_years {
+    background-image: url(../resources/img/covers/1_the_later_years.jpeg);
+}
+
+#the_endless_river {
+    background-image: url(../resources/img/covers/2_the_endless_river.jpeg);
+}
+
+#pulse {
+    background-image: url(../resources/img/covers/3_pulse.jpg);
+}
+
+#the_division_bell {
+    background-image: url(../resources/img/covers/4_the_division_bell.jpg);
+}
+
+#delicate_sound_of_thunder {
+    background-image: url(../resources/img/covers/5_delicate_sound_of_thunder.webp);
+}
+
+#momentary_lapse_of_reason {
+    background-image: url(../resources/img/covers/6_momentary_lapse_of_reason.jpg);
+}
+
+#the_final_cut {
+    background-image: url(../resources/img/covers/7_the_final_cut.jpg);
+}
+
+#the_wall {
+    background-image: url(../resources/img/covers/8_the_wall.webp);
+}
+
+#animals {
+    background-image: url(../resources/img/covers/9_animals.jpg);
+}
+
+#wish_you_were_here {
+    background-image: url(../resources/img/covers/10_wish_you_were_here.jpg);
+}
+
+#the_dark_side_of_the_moon {
+    background-image: url(../resources/img/covers/11_the_dark_side_of_the_moon.webp);
+}
+
+#obscured_by_clouds {
+    background-image: url(../resources/img/covers/12_obscured_by_clouds.webp);
+}
+
+#meddle {
+    background-image: url(../resources/img/covers/13_meddle.jpg);
+}
+
+#atom_heart_mother {
+    background-image: url(../resources/img/covers/14_atom_heart_mother.webp);
+}
+
+#ummagumma {
+    background-image: url(../resources/img/covers/15_ummagumma.jpg);
+}
+
+#more {
+    background-image: url(../resources/img/covers/16_more.jpg);
+}
+
+#a_saurceful_of_secrets {
+    background-image: url(../resources/img/covers/17_a_saurceful_of_secrets.jpg);
+}
+
+#the_piper_at_the_gates_of_dawn {
+    background-image: url(../resources/img/covers/18_the_piper_at_the_gates_of_dawn.jpg);
 }

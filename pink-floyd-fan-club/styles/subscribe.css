@@ -1,73 +1,32 @@
-* {
+@charset "UTF-8";
+
+h2 {
+    font-size: 32px;
+    line-height: 7vh;
     color: white;
 }
 
-#subscribe {
-    min-height: 72vh;
+#container {
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
-}
-
-#subscribe__header {
-    font-size: 32px;
-    line-height:7vh;
-}
-
-#subscribe__form {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
     justify-content: center;
-    width: 60vw;
 }
 
-.subscribe__form_label {
-    font-weight: bold;
-}
-
-.subscribe__form_input {
-    border: 0;
-    background-color: rgb(66, 66, 66);
-    border-radius: 0;
-    height: 34px;
-    width: 100%;
-    box-shadow: 0 0 2px black;
-    font-size: 18px;
-    padding: 10px;
-    margin: 10px 0;
-}
-
-#subscribe__form_sex_options {
-    margin: 10px 0;
-}
-
-#subscribe__form_checkbox_container {
-    margin: 10px 0 20px;
-}
-
-#subscribe__form_button_container {
+#form_wrapper {
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    width: 60vw;
+    height: 72vh;
 }
 
-#subscribe__form_submit_button {
-    background-color: rgb(57, 137, 241);
-    color: rgb(13, 13, 13);
-    border: 0;
-    border-radius: 3px;
-    font-size: 24px;
-    padding: 10px;
-    width: 48%;
+#form_container {
+    width: 60%;
+    height: 100%;
+    padding: 5vh;
+    background-color: blue;
 }
 
-#subscribe__form_reset_button {
-    background-color: rgb(158, 158, 158);
-    color: rgb(13, 13, 13);
-    border: 0;
-    border-radius: 3px;
-    font-size: 24px;
-    padding: 10px;
-    width: 48%;
+#form_image {
+    width: 40%;
+    height: 100%;
+    background-color: red;
 }
