@@ -74,6 +74,7 @@ h2 {
 
 .participant:hover>.participant_header {
     display: block;
+    text-shadow: 0px 0px 20px rgb(0, 0, 0, 0.5);
 }
 
 #albums {
@@ -123,10 +124,14 @@ a {
     font-weight: bolder;
 }
 
+.album:hover>h3 {
+    visibility: visible;
+    text-shadow: 0px 0px 10px black;
+}
 
-.album:hover>h3,
 .album:hover>h2 {
     visibility: visible;
+    text-shadow: 0px 0px 30px black;
 }
 
 

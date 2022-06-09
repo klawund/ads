@@ -14,6 +14,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 
 <body>
@@ -36,13 +38,46 @@
         <section id="form_wrapper">
             <div id="form_container">
                 <h2 id="form__header">Vire um fã!</h2>
-                <form id="form" action="#" target="_blank"></form>
+                <form id="form" action="#" target="_self">
+
+                    <label for="form__input_name" class="form__label">Nome</label>
+                    <input type="text" name="form__input_name" id="form__input_name" class="form__input"
+                        placeholder="Roger Waters">
+
+                    <label for="form__input_sex" class="form__label">Sexo</label>
+                    <div class="form__input_radio">
+                        <input type="radio" name="form__input_sex" id="form__input_sex_masc"><span style="color: white">
+                            Masculino</span>
+                        <input type="radio" name="form__input_sex" id="form__input_sex_fem"><span style="color: white">
+                            Feminino</span>
+                    </div>
+
+                    <label for="form__input_email" class="form__label">E-mail</label>
+                    <input type="email" name="form__input_email" id="form__input_email" class="form__input"
+                        placeholder="roger@pinkfloyd.com">
+
+                    <label for="form__input_tel" class="form__label">Telefone</label>
+                    <input type="tel" name="form__input_tel" id="form__input_tel" class="form__input">
+
+                    <label for="form__input_dob" class="form__label">Data de nascimento</label>
+                    <input type="date" name="form__input_dob" id="form__input_dob" class="form__input">
+
+                    <div id="form__input_checkbox">
+                        <input type="checkbox" name="form__input_subscribe" id="form__input_subscribe"><span
+                            style="color: white"> Desejo participar do fã clube</span>
+                    </div>
+
+                    <div id="form__buttons">
+                        <button id="form__buttons_submit" class="form__button" type="submit">Enviar</button>
+                        <button id="form__buttons_reset" class="form__button" type="reset">Cancelar</button>
+                    </div>
+                </form>
             </div>
             <div id="form_image"></div>
         </section>
     </div>
 
-    <footer>Made with <3 by <a href="https://github.com/klawund">Hiago Klabunde</a></footer>
+    <footer>Made with <3 by <a href="https://linkedin.com/in/hiagoklabunde">Hiago Klabunde</a></footer>
 </body>
 
 </html>

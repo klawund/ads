@@ -14,19 +14,76 @@ h2 {
 #form_wrapper {
     display: flex;
     flex-direction: row;
-    width: 60vw;
-    height: 72vh;
+    min-width: 60vw;
+    min-height: 72vh;
 }
 
 #form_container {
     width: 60%;
     height: 100%;
     padding: 5vh;
-    background-color: blue;
+    background-color: rgb(30, 30, 30);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
 }
 
 #form_image {
     width: 40%;
     height: 100%;
-    background-color: red;
+    background-image: url(../resources/img/subscribe.webp);
+    background-size: cover;
+    background-position-x: 30vw;
+}
+
+.form__label {
+    margin-top: 1rem;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.form__input {
+    font-size: 1rem;
+    padding: 0 10px;
+    height: 2.2rem;
+    color: rgb(40, 40, 40);
+}
+
+#form__input_checkbox {
+    margin: 1rem 0;
+}
+
+#form__buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 50%;
+}
+
+.form__button {
+    width: 45%;
+    height: 2.5rem;
+    border: 0;
+    font-size: 1.2rem;
+    border-radius: 2%;
+}
+
+#form__buttons_submit {
+    background-color: rgb(66, 126, 255);
+    color: white;
+}
+
+#form__buttons_submit:hover {
+    background-color: rgb(86, 146, 275);
+}
+
+#form__buttons_reset {
+    background-color: rgb(170, 170, 170);
+    color: rgb(40, 40, 40);
+}
+
+#form__buttons_reset:hover {
+    background-color: rgb(190, 190, 190);
 }
